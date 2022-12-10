@@ -13,7 +13,7 @@
 <div class="wrapper flex">
   <div class="center-box transition br8">
     <div class="title-box font-center">
-      <h2 class="">学生成绩管理系统</h2>
+      <h2 class="">学生</h2>
       <div class="line"></div>
     </div>
     <form class="form-box" action="/login" method="post">

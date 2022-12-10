@@ -19,8 +19,8 @@ public class RegisterServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         DataBaseUtils db = new DataBaseUtils();
-        String queryUser = "SELECT * FROM aa";
-        String insertSql = "INSERT into aa (username, password) values(?,?)";
+        String queryUser = "SELECT * FROM user";
+        String insertSql = "INSERT into user (username, password) values(?,?)";
         try {
             PreparedStatement psmt = db.insert(insertSql);
             ResultSet rs = db.getResult(queryUser);

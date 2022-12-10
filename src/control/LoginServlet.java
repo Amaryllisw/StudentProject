@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
         String inputName = req.getParameter("username");
         String inputPwd = req.getParameter("password");
         DataBaseUtils db = new DataBaseUtils();
-        String sql = "SELECT * FROM aa";
+        String sql = "SELECT * FROM user";
         try {
             ResultSet rs = db.getResult(sql);
             while (rs.next()) {
