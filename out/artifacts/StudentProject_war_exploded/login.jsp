@@ -13,7 +13,7 @@
 <div class="wrapper flex">
   <div class="center-box transition br8">
     <div class="title-box font-center">
-      <h2 class="">学生</h2>
+      <h2>学生成绩管理系统</h2>
       <div class="line"></div>
     </div>
     <form class="form-box" action="/login" method="post">
@@ -33,8 +33,8 @@
         <div class="input-wrapper">
           <div class="hidden">
             <div class="fl">
-              <label><input type="radio" name="role" id=""><span class="gray">教师</span></label>
-              <label><input type="radio" name="role" id=""><span class="gray">学生</span></label>
+              <label><input type="radio" name="role" id="" value="teacher" checked><span class="gray">教师</span></label>
+              <label><input type="radio" name="role" id="" value="student"><span class="gray">学生</span></label>
             </div>
             <div class="fr">
                 <a href="register.jsp" class="register-box transition">点击注册</a>

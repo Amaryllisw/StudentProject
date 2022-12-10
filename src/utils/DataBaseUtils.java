@@ -5,7 +5,7 @@ import java.sql.*;
 public class DataBaseUtils {
     private String user = "root";
     private String password = "1234";
-    private String url = "jdbc:mysql://1.12.77.135:3306/student";
+    private String url = "jdbc:mysql://1.12.77.135:3306/student?characterEncoding=utf8";
 
     private Connection connection = null;
     private Statement statement = null;

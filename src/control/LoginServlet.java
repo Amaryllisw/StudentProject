@@ -17,6 +17,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
+        resp.setCharacterEncoding("UTF-8");
         String inputName = req.getParameter("username");
         String inputPwd = req.getParameter("password");
         DataBaseUtils db = new DataBaseUtils();
@@ -28,8 +29,10 @@ public class LoginServlet extends HttpServlet {
                 String pwd = rs.getString("password");
                 if (name.equals(inputName) && pwd.equals(inputPwd)) {
                     // 登录成功
+                    String role = rs.getString("role");
                     HttpSession session = req.getSession();
                     session.setAttribute("username", name);
+                    session.setAttribute("role", role);
                     resp.sendRedirect("index.jsp");
                     return;
                 }
