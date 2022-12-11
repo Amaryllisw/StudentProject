@@ -33,8 +33,8 @@
         <div class="input-wrapper">
           <div class="hidden">
             <div class="fl">
-              <label><input type="radio" name="role" id="" value="teacher" checked><span class="gray">教师</span></label>
-              <label><input type="radio" name="role" id="" value="student"><span class="gray">学生</span></label>
+              <label><input type="radio" name="role" id="" value="teacher"><span class="gray">教师</span></label>
+              <label><input type="radio" name="role" id="" value="student" checked><span class="gray">学生</span></label>
             </div>
             <div class="fr">
                 <a href="register.jsp" class="register-box transition">点击注册</a>

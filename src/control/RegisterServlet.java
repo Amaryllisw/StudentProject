@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import utils.DataBaseUtils;
 
 @WebServlet("/register")
@@ -28,7 +27,7 @@ public class RegisterServlet extends HttpServlet {
             PreparedStatement psmt = db.insert(insertSql);
             ResultSet rs = db.getResult(queryUser);
             while(rs.next()) {
-                if (rs.getString("username").equals("username")) {
+                if (rs.getString("username").equals(username)) {
                     resp.sendRedirect("register.jsp?err=-1");
                     return;
                 }

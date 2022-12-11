@@ -30,12 +30,14 @@
                     </label>
                 </div>
                 <div class="input-wrapper">
-                    <div class="fl">
-                        <label><input type="radio" name="role" id="" value="teacher" checked><span class="gray">教师</span></label>
-                        <label><input type="radio" name="role" id="" value="student"><span class="gray">学生</span></label>
-                    </div>
-                    <div class="fr">
-                        <a href="login.jsp" class="register-box">返回登录</a>
+                    <div class="hidden">
+                        <div class="fl">
+                            <label><input type="radio" name="role" id="" value="teacher" checked><span class="gray">教师</span></label>
+                            <label><input type="radio" name="role" id="" value="student"><span class="gray">学生</span></label>
+                        </div>
+                        <div class="fr">
+                            <a href="login.jsp" class="register-box">返回登录</a>
+                        </div>
                     </div>
                     <div class="error-box">
                         <p class="${param.err == -1 ? 'block' : 'none'}">用户名已存在</p>

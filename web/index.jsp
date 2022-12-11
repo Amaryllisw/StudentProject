@@ -8,7 +8,7 @@
     <link href="css/content.css" rel="stylesheet">
 </head>
 <body>
-<c:if test="${empty sessionScope.username}">--%>
+<c:if test="${empty sessionScope.userinfo}">--%>
         <% response.sendRedirect("login.jsp"); %>
 </c:if>
 
@@ -18,7 +18,9 @@
     <div class="main-wrapper">
         <c:import url="top-bar.jsp"></c:import>
         <div class="center-wrapper">
-            <main class="main-box"></main>
+            <main class="main-box">
+
+            </main>
         </div>
     </div>
 </div>

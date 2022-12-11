@@ -7,8 +7,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+
+import model.UserInfo;
 import utils.DataBaseUtils;
-import java.sql.Connection;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -27,12 +29,13 @@ public class LoginServlet extends HttpServlet {
             while (rs.next()) {
                 String name = rs.getString("username");
                 String pwd = rs.getString("password");
+                String id = rs.getString("stuId");
                 if (name.equals(inputName) && pwd.equals(inputPwd)) {
                     // 登录成功
                     String role = rs.getString("role");
                     HttpSession session = req.getSession();
-                    session.setAttribute("username", name);
-                    session.setAttribute("role", role);
+                    UserInfo userinfo = new UserInfo(id, name, pwd, role);
+                    session.setAttribute("userinfo", userinfo);
                     resp.sendRedirect("index.jsp");
                     return;
                 }

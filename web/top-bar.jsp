@@ -12,7 +12,7 @@
                     kk
                 </div>
                 <div class="fr user-info-box">
-                    <p>欢迎你，${sessionScope.username} <span>${sessionScope.role == "teacher" ? "老师" : "同学"}</span></p>
+                    <p>欢迎你，${sessionScope.userinfo.getUsername()} <span>${sessionScope.userinfo.getRole() == "teacher" ? "老师" : "同学"}</span></p>
                 </div>
             </div>
         </div>
